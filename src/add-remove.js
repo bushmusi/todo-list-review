@@ -148,9 +148,7 @@ export default class Todo {
     trashIcon.id = `option-${index}`;
     trashIcon.className = 'fa fa-trash option-menu';
 
-    currentLi.appendChild(checkbox);
-    currentLi.appendChild(label);
-    currentLi.appendChild(trashIcon);
+    [checkbox, label, trashIcon].forEach((item) => currentLi.appendChild(item));
     currentLi.style.display = 'flex';
 
     textInput.addEventListener('change', (event) => {
